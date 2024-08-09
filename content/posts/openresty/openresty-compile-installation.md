@@ -8,7 +8,7 @@ categories:
 tags:
     - install
     - openresty
-draft: false
+draft: true
 ---
 
 自己动手编译安装有时候是必须的, 因为根据具体项目的需要, 比如CDN项目, 官方的默认编译选项就缺少一些必要的模块, 比如`ngx_cache_purge`模块, 如果需要对`ipv6`做支持, 还需要nginx的`--with-ipv6`编译选项, 等等.

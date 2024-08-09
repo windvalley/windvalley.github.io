@@ -12,7 +12,7 @@ author: ""
 authorLink: ""
 
 tags: ["security", "password"]
-categories: ["OPS"]
+categories: ["Hack"]
 
 featuredImage: ""
 featuredImagePreview: ""

@@ -6,7 +6,7 @@ categories:
     - Shell
 tags:
     - shell
-draft: false
+draft: true
 ---
 
 为了能写出规范、健壮的Shell代码, 推荐使用shellcheck对我们的Shell代码做检查.

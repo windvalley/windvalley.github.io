@@ -9,7 +9,7 @@ tags:
   - setup
 toc:
   enable: false
-draft: false
+draft: true
 ---
 
 如果公司想要搭建自己的`权威DNS集群`用于管理公司所有域名的解析, 需要先注册一个一级域名, 比如说`sre.im`, 然后确定`权威DNS的域名`和对应的`VIP`的关系, 比如:

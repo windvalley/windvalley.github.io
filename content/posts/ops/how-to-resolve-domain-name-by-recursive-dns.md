@@ -8,7 +8,7 @@ tags:
     - dns
     - how
     - ops
-draft: false
+draft: true
 ---
 
 我们拿解析`www.360.cn`域名为例说明.

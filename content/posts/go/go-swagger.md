@@ -3,25 +3,24 @@ title: "为基于Gin的Web项目生成Swagger在线API文档"
 date: 2018-12-31T10:24:36+08:00
 lastmod: 2018-12-31T10:24:36+08:00
 categories:
-    - Go
-    - Web
+  - Go
 tags:
-    - go
-    - web
-    - gin
+  - go
+  - web
+  - gin
 keywords:
-    -
-draft: false
+  -
+draft: true
 ---
 
-## 安装swag命令
+## 安装 swag 命令
 
 ```bash
 go get -u github.com/swaggo/swag/cmd/swag
 ```
 
 > 注意: <br>
-> 确保提前配置了Go环境.
+> 确保提前配置了 Go 环境.
 
 ```bash
 # Go
@@ -38,14 +37,14 @@ export GOPATH GOBIN PATH GOPROXY
 swag -v
 ```
 
-## 安装gin-swagger
+## 安装 gin-swagger
 
 ```bash
 go get -u github.com/swaggo/gin-swagger
 go get -u github.com/swaggo/files
 ```
 
-## 为swagger添加访问路由
+## 为 swagger 添加访问路由
 
 路由文件: `router/router.go`
 
@@ -178,7 +177,7 @@ docs/
 swag init
 ```
 
-## 访问swagger在线API文档
+## 访问 swagger 在线 API 文档
 
 编译项目并运行后, 访问:
 
@@ -188,5 +187,4 @@ http://localhost:8080/swagger/index.html
 
 ## 官方文档
 
-> https://github.com/swaggo/swag/blob/master/README.md <br>
-> https://swaggo.github.io/swaggo.io/declarative_comments_format/general_api_info.html
+> https://github.com/swaggo/swag/blob/master/README.md <br> > https://swaggo.github.io/swaggo.io/declarative_comments_format/general_api_info.html

@@ -3,10 +3,10 @@ title: "使用Python实时分析处理Nginx访问日志"
 date: 2015-01-16T14:15:07+08:00
 lastmod: 2015-01-16T14:15:07+08:00
 categories:
-    - Python
+  - Python
 tags:
-    - python
-draft: false
+  - python
+draft: true
 ---
 
 ```python

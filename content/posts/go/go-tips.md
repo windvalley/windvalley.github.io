@@ -8,7 +8,7 @@ categories:
 tags:
   - go
   - tips
-draft: false
+draft: true
 ---
 
 ## 常识

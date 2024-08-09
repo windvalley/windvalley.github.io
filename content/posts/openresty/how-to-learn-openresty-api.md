@@ -8,7 +8,7 @@ tags:
     - openresty
     - lua
     - api
-draft: false
+draft: true
 ---
 学会使用官方文档查询信息非常重要, 下面我们以OpenResty的`ngx.arg`这个API来演示如何快速学习并使用OpenResty的api.
 

@@ -3,12 +3,12 @@ title: "Go的包管理工具: go mod"
 date: 2019-03-09T10:59:45+08:00
 lastmod: 2019-03-09T10:59:45+08:00
 categories:
-    - Go
+  - Go
 tags:
-    - go
+  - go
 keywords:
-    -
-draft: false
+  -
+draft: true
 ---
 
 ## 版本要求和环境变量
@@ -31,7 +31,7 @@ draft: false
 
 一般我们保持默认值即可.
 
-## 初始化一个module
+## 初始化一个 module
 
 `go mod init yourmodulename`
 
@@ -54,8 +54,8 @@ go 1.13
 ```
 
 > `go.mod`文件一旦创建, 它的内容将会被`go toolchain`全面掌控,
-`go toolchain`会在各类命令执行时, 比如`go get`、`go build`、`go mod`等,
-同步修改和维护`go.mod`文件.
+> `go toolchain`会在各类命令执行时, 比如`go get`、`go build`、`go mod`等,
+> 同步修改和维护`go.mod`文件.
 
 ## 管理项目的依赖包
 
@@ -66,7 +66,7 @@ go 1.13
 `go mod tidy`
 
 也可以先执行这个命令, 如果本机还没有相关的依赖包,
-就会自动将依赖的zip压缩包下载到`$GOPATH/pkg/mod/cache/download/`目录下,
+就会自动将依赖的 zip 压缩包下载到`$GOPATH/pkg/mod/cache/download/`目录下,
 然后将下载的压缩包解压到`$GOPATH/pkg/mod/`目录下;
 最后生成`go.sum`文件.
 
@@ -106,20 +106,14 @@ github.com/cespare/xxhash v1.1.0/go.mod h1:XrSqR1VqqWfGrhpAt58auRo0WTKS1nRRg3ghf
 
 > `go.mod`: <br>
 > 该文件是使用`go mod`管理项目所必须的最重要的文件,
-> 因为它描述了当前项目的元信息, 每一行都以一个动词开头, 目前有以下`5`个动词: <br>
-> `module` - 用于定义当前项目的模块路径; <br>
-> `go` - 用于设置预期的 Go 版本; <br>
-> `require` - 用于设置一个特定的模块版本; <br>
-> `exclude` - 用于从使用中排除一个特定的模块版本; <br>
-> `replace` - 用于将一个模块版本替换为另外一个模块版本.
+> 因为它描述了当前项目的元信息, 每一行都以一个动词开头, 目前有以下`5`个动词: <br> > `module` - 用于定义当前项目的模块路径; <br> > `go` - 用于设置预期的 Go 版本; <br> > `require` - 用于设置一个特定的模块版本; <br> > `exclude` - 用于从使用中排除一个特定的模块版本; <br> > `replace` - 用于将一个模块版本替换为另外一个模块版本.
 
 ---
 
 > `go.sum`: <br>
 > 该文件详细罗列了当前项目直接或间接依赖的所有模块版本,
 > 并写明了那些模块版本的`SHA-256`哈希值,
-> 以备`Go`在今后的操作中保证项目所依赖的那些模块版本不会被篡改. <br>
-> `go mod`安装依赖包的原则是先拉取最新的`release tag`, 若无`tag`,
+> 以备`Go`在今后的操作中保证项目所依赖的那些模块版本不会被篡改. <br> > `go mod`安装依赖包的原则是先拉取最新的`release tag`, 若无`tag`,
 > 则拉取最新的`commit`. 最后会自动生成一个`go.sum`文件来记录`dependency tree`.
 
 ## 更新依赖包
@@ -130,7 +124,7 @@ github.com/cespare/xxhash v1.1.0/go.mod h1:XrSqR1VqqWfGrhpAt58auRo0WTKS1nRRg3ghf
 
 `go get package@version`: 升级某个依赖包到指定的版本号.
 
-## vendor模式介绍
+## vendor 模式介绍
 
 `go mod vendor`
 
@@ -139,7 +133,7 @@ github.com/cespare/xxhash v1.1.0/go.mod h1:XrSqR1VqqWfGrhpAt58auRo0WTKS1nRRg3ghf
 然后通过设置环境变量`GOFLAGS=-mod=vendor`来启用`vendor`模式, 此时,
 依赖包将会优先从该目录查找.
 
-> 注意: `go mod`不推荐使用vendor模式.
+> 注意: `go mod`不推荐使用 vendor 模式.
 
 ## go mod 其他命令介绍
 
@@ -167,4 +161,4 @@ github.com/cespare/xxhash v1.1.0/go.mod h1:XrSqR1VqqWfGrhpAt58auRo0WTKS1nRRg3ghf
 
 最好不要使用`vendor`模式, 更不要将`vendor`目录提交到版本控制;
 
-需要提交`go.mod`到版本控制, 可以忽略`go.sum`.
+需要提交`go.mod`和`go.sum`到版本控制.

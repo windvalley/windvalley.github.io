@@ -3,12 +3,12 @@ title: "Git常用命令速查"
 date: 2015-05-16T12:26:50+08:00
 lastmod: 2015-05-16T12:26:50+08:00
 categories:
-    - OPS
+  - OPS
 tags:
-    - git
+  - git
 keywords:
-    -
-draft: false
+  -
+draft: true
 ---
 
 ## 基础常用命令
@@ -25,20 +25,20 @@ git config --global user.email 'foo@sre.im'
 git config --global --list
 ```
 
-配置全局user信息, 以上命令会自动生成`~/.gitconfig`文件.
+配置全局 user 信息, 以上命令会自动生成`~/.gitconfig`文件.
 
 ```bash
 git config --local user.name 'bar'
 git config --local user.email 'bar@sre.im'
 ```
 
-配置当前仓库的user信息, 在当前仓库不希望使用用户全局配置的情况下使用.
+配置当前仓库的 user 信息, 在当前仓库不希望使用用户全局配置的情况下使用.
 
 ### add
 
 `git add .`或`git add *`、`git add somefiles`
 
-把目录下所有新增的或有修改的文件, 或指定某个或某些文件添加到git版本库的暂存区.
+把目录下所有新增的或有修改的文件, 或指定某个或某些文件添加到 git 版本库的暂存区.
 
 `git add -u`
 
@@ -50,45 +50,45 @@ git config --local user.email 'bar@sre.im'
 
 `git status`
 
-查看当前git状态信息.
+查看当前 git 状态信息.
 
 ### commit
 
 `git commit -m"fix some bug."`
 
-将暂存区的文件commit到版本库的当前分支, 默认为master分支.
+将暂存区的文件 commit 到版本库的当前分支, 默认为 master 分支.
 
 `git commit -am'变更的注释信息'`
 
-其中的-a参数是add, 加上这个参数可以省略掉被修改的文件由工作区加入到版本库暂存区的步骤,注意-a对新增文件不起作用.
+其中的-a 参数是 add, 加上这个参数可以省略掉被修改的文件由工作区加入到版本库暂存区的步骤,注意-a 对新增文件不起作用.
 
 `git commit -amend`
 
-修改最近一次commit的注释.
+修改最近一次 commit 的注释.
 
 `git reset HEAD~` 或 `git reset HEAD^`
 
-撤销最近一次的commit, 撤销`git add`, 仅工作区改动保留.
+撤销最近一次的 commit, 撤销`git add`, 仅工作区改动保留.
 
 `git reset --soft HEAD~`
 
-撤销最近一次的commit, 仅仅撤销commit, 不撤销`git add`,
+撤销最近一次的 commit, 仅仅撤销 commit, 不撤销`git add`,
 也就是工作区和暂存区都保留.
 
 `git reset --hard HEAD~`
 
-撤销最近一次的commit, 撤销`git add`, 工作区改动删除,
-也就是完全回到了上一个commit版本.
+撤销最近一次的 commit, 撤销`git add`, 工作区改动删除,
+也就是完全回到了上一个 commit 版本.
 
 ### 版本恢复
 
 `git log` 或 `git log --pretty=oneline`
 
-查看commit历史，确定回退到哪个版本.
+查看 commit 历史，确定回退到哪个版本.
 
 `git reflog`
 
-查看全部commit历史版本，确定回到未来哪个版本.
+查看全部 commit 历史版本，确定回到未来哪个版本.
 
 `git reset --hard HEAD^`
 
@@ -102,7 +102,7 @@ git config --local user.email 'bar@sre.im'
 
 `gitk`(只展示当前分支) 或 `gitk --all`(展示所有分支)
 
-工作区内, 通过窗口模式管理git仓库.
+工作区内, 通过窗口模式管理 git 仓库.
 
 ## 查看历史版本
 
@@ -135,11 +135,11 @@ git branch -av  # 查看有多少分支, 当前属于哪个分支
 
 ### 删除分支
 
-`git branch -d fix-test1  # -d删除不掉的情况, 用-D`
+`git branch -d fix-test1 # -d删除不掉的情况, 用-D`
 
 ### 合并分支
 
-比如在tmp1分支开发完成后, 要将tmp1的合并到master分支上, 则:
+比如在 tmp1 分支开发完成后, 要将 tmp1 的合并到 master 分支上, 则:
 
 ```bash
 git checkout master # 切换到master分支
@@ -152,3 +152,4 @@ git log --oneline
 ```bash
 git diff HEAD HEAD~2  # 比较当前版本和祖父版本的差异
 git diff ea0b75a1 2a02b5a1 # 比较两个commit版本的差异
+```

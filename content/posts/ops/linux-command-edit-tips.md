@@ -1,16 +1,15 @@
 ---
-title: "Linux命令行编辑Tips"
+title: "Linux命令行编辑快捷键"
 date: 2009-12-20T11:18:29+08:00
 authors:
-    - windvalley
+  - windvalley
 categories:
-    - Linux
+  - Hack
 tags:
-    - linux
-    - command
-    - tips
+  - shortcut
+  - tips
 keywords:
-    -
+  -
 draft: false
 ---
 
@@ -28,7 +27,7 @@ draft: false
 
 `ctrl+e`: 光标移动到行尾.
 
-> 应避免使用方向键⬅️  或➡️  , 影响效率.
+> 应避免使用方向键 ⬅️ 或 ➡️ , 影响效率.
 
 ## 删除命令行字符
 
@@ -54,9 +53,9 @@ draft: false
 
 ## 操作历史命令
 
-`ctrl+p`: 显示上一条历史命令, 应避免使用⬆️.
+`ctrl+p`: 显示上一条历史命令, 应避免使用 ⬆️.
 
-`ctrl+n`: 显示下一条历史命令, 应避免使用⬇️.
+`ctrl+n`: 显示下一条历史命令, 应避免使用 ⬇️.
 
 `ctrl+r`: 搜索历史命令, 输入关键字后, 想删除关键字字符, 使用`ctrl+h`;
 要执行匹配的命令行`enter`即可, 要让历史命令显示在命令行当不执行`esc`即可.
@@ -65,13 +64,13 @@ draft: false
 
 `!!`: 执行上一条命令.
 
-`^foo`: 删除上一条命令里的foo并执行.
+`^foo`: 删除上一条命令里的 foo 并执行.
 
-`^foo^bar`: 把上一条命令里的foo替换为bar并执行.
+`^foo^bar`: 把上一条命令里的 foo 替换为 bar 并执行.
 
-`!curl`: 执行最近的以curl开头的命令.
+`!curl`: 执行最近的以 curl 开头的命令.
 
-`!curl:p`: 打印最近的以curl开头的命令, 但不执行.
+`!curl:p`: 打印最近的以 curl 开头的命令, 但不执行.
 
 `!$`或`$_`: 上一条命令的最后一个参数, 一般加在新命令后执行.
 
