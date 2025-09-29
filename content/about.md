@@ -5,7 +5,7 @@ slug: "about"
 
 ## 本站
 
-域名`sre.im`,
+域名`windvalley.github.io`,
 基于 [Hugo](https://gohugo.io/)/[LoveIt](https://github.com/dillonzq/LoveIt) 构建,
 用于技术分享.
 
